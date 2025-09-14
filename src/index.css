@@ -9,3 +9,26 @@
 
 
 @import "tailwindcss";
+
+/* Parallax scrolling effect */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced parallax effect with scroll-based transform */
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-bg {
+    transform: translateZ(0) scale(1.1);
+    transition: transform 0.1s ease-out;
+  }
+}
