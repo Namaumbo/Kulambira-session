@@ -8,7 +8,7 @@ export default function HomePage() {
     const handleScroll = () => {
       if (parallaxRef.current) {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
+        const rate = scrolled * -0.8;
         parallaxRef.current.style.transform = `translateY(${rate}px)`;
       }
     };
@@ -88,6 +88,8 @@ export default function HomePage() {
           </button>
         </div>
       </div>
+
+      
     </div>
   );
 }
